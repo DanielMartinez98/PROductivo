@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "39DBBA8F-3433-4B1E-942E-22F9A633277C"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7E1FC831-4DD1-4CF0-B22E-06CBEB94960E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PROductivo/CrearTarea.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "CrearTarea"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "7E1FC831-4DD1-4CF0-B22E-06CBEB94960E - e5247b272c648341"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PROductivo.CrearTarea.Input.getter : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "PROductivo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/usuarioPrincipal/Desktop/Aplicacion/PROductivo/PROductivo/CrearTarea.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "7E1FC831-4DD1-4CF0-B22E-06CBEB94960E - 7979f03219ff9415"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PROductivo.CrearTarea.Input.setter : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "PROductivo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/usuarioPrincipal/Desktop/Aplicacion/PROductivo/PROductivo/CrearTarea.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "155">
+               </Location>
+               <Location
+                  uuid = "7E1FC831-4DD1-4CF0-B22E-06CBEB94960E - dd8264bb36ea5e16"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PROductivo.CrearTarea.Input.modify : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "PROductivo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/usuarioPrincipal/Desktop/Aplicacion/PROductivo/PROductivo/CrearTarea.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "65">
+               </Location>
+               <Location
+                  uuid = "7E1FC831-4DD1-4CF0-B22E-06CBEB94960E - a7272cf779bae5f9"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PROductivo.CrearTarea.Input.modify : Swift.Optional&lt;__C.UITextField&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "PROductivo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/usuarioPrincipal/Desktop/Aplicacion/PROductivo/PROductivo/CrearTarea.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "80">
+               </Location>
+               <Location
+                  uuid = "7E1FC831-4DD1-4CF0-B22E-06CBEB94960E - a900bba2ca97730"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PROductivo.CrearTarea.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; PROductivo.CrearTarea"
+                  moduleName = "PROductivo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/usuarioPrincipal/Desktop/Aplicacion/PROductivo/PROductivo/CrearTarea.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "146">
+               </Location>
+               <Location
+                  uuid = "7E1FC831-4DD1-4CF0-B22E-06CBEB94960E - fa8a1d87663be2ce"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PROductivo.CrearTarea.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;PROductivo.CrearTarea&gt;"
+                  moduleName = "PROductivo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/usuarioPrincipal/Desktop/Aplicacion/PROductivo/PROductivo/CrearTarea.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "102">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9E6F4276-DC26-465D-A249-46E8950AA974"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PROductivo/CrearTarea.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "CrearTarea"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "9E6F4276-DC26-465D-A249-46E8950AA974 - 62bc953c0f49bc5d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PROductivo.CrearTarea.__deallocating_deinit"
+                  moduleName = "PROductivo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/usuarioPrincipal/Desktop/Aplicacion/PROductivo/PROductivo/CrearTarea.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "9E6F4276-DC26-465D-A249-46E8950AA974 - 3fa371397e5d8ff6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PROductivo.CrearTarea.__allocating_init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; PROductivo.CrearTarea"
+                  moduleName = "PROductivo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/usuarioPrincipal/Desktop/Aplicacion/PROductivo/PROductivo/CrearTarea.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "9E6F4276-DC26-465D-A249-46E8950AA974 - a900bba2ca97730"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PROductivo.CrearTarea.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; PROductivo.CrearTarea"
+                  moduleName = "PROductivo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/usuarioPrincipal/Desktop/Aplicacion/PROductivo/PROductivo/CrearTarea.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "146">
+               </Location>
+               <Location
+                  uuid = "9E6F4276-DC26-465D-A249-46E8950AA974 - 1a4467354995ed07"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PROductivo.CrearTarea.__allocating_init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;PROductivo.CrearTarea&gt;"
+                  moduleName = "PROductivo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/usuarioPrincipal/Desktop/Aplicacion/PROductivo/PROductivo/CrearTarea.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "9E6F4276-DC26-465D-A249-46E8950AA974 - fa8a1d87663be2ce"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PROductivo.CrearTarea.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;PROductivo.CrearTarea&gt;"
+                  moduleName = "PROductivo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/usuarioPrincipal/Desktop/Aplicacion/PROductivo/PROductivo/CrearTarea.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "102">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3898C4CD-93B9-44DD-902E-1D693F8C3538"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PROductivo/CrearTarea.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "cambioText(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1FE449C9-CA2C-4339-B00F-3FA327B9C6D8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PROductivo/Main.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "viewWillDisappear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
