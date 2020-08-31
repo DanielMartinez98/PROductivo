@@ -55,6 +55,7 @@ class alterarTarea: UIViewController {
                 self.ref.child("Tareas Hechas").child(Auth.auth().currentUser!.uid).child(nuevaListaClase[seleccion.nClase].id).child(nuevaListaClase[seleccion.nClase].listaTarea[seleccion.nTarea].nombre).setValue(["Fecha": "\(date)"])
                 self.ref.child("Tareas").child(Auth.auth().currentUser!.uid).child(nuevaListaClase[seleccion.nClase].id).child( nuevaListaClase[seleccion.nClase].listaTarea[seleccion.nTarea].nombre).removeValue()
                 nuevaListaClase[seleccion.nClase].listaTarea.remove(at: seleccion.nTarea)
+                organizer.remove(at: seleccion.nLista)
             }else
             {
                 let a = (seleccion.nTarea + 1)*(-1)

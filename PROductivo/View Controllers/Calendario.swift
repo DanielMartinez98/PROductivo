@@ -17,6 +17,7 @@ class Calendario: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UI
     @IBOutlet weak var calendar: FSCalendar!
     @IBOutlet weak var tabla: UITableView!
     override func viewDidLoad() {
+        llenarArreglo()
         super.viewDidLoad()
         calendar.delegate = self
         calendar.dataSource = self
@@ -24,24 +25,21 @@ class Calendario: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UI
         tabla.delegate = self
     }
     override func viewDidAppear(_ animated: Bool) {
-        
-    }
-    func reloading()
-    {
-        self.tabla.beginUpdates()
-        self.tabla.endUpdates()
         self.tabla.reloadData()
         self.calendar.reloadData()
+        super.viewDidAppear(animated)
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
     }
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+        print("cambiando fecha")
         dia = date
-        reloading()
+        self.tabla.reloadData()
     }
     func llenarArreglo()
     {
+        print("llenando arreglo")
         arreglo.removeAll()
         var ContC = 0
         var ContT = 0
@@ -86,8 +84,9 @@ class Calendario: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UI
         }else {return 3}
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print("cantidad de rows")
         let formatter = DateFormatter()
-        formatter.dateFormat = "dd-MM-YYYY"
+        formatter.dateFormat = "YYYY-dd-MM"
         var cont = 0
         arregloDia = [tareaMain]()
         for n in arreglo
@@ -102,10 +101,11 @@ class Calendario: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UI
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
         {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! cellAct
+            print("cell for row")
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! cellCalendario
             let a = arregloDia[indexPath.row]
+            cell.MyImage.tintColor = nuevaListaClase[a.num].colores
             cell.MyLabel.text = a.tarea.nombre
-            cell.MyImage.backgroundColor = nuevaListaClase[a.num].colores
             let formatter = DateFormatter()
             formatter.dateFormat = "YYYY-dd-MM"
             let today = formatter.date(from: formatter.string(from: Date()))
@@ -130,8 +130,12 @@ class Calendario: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UI
                 cell.myDias.textColor = UIColor.label
                 }
             }
+            print("return for row")
             return (cell)
         }
+/*func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(60)
+    }
         func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath)
         {
             if editingStyle == UITableViewCell.EditingStyle.delete
@@ -151,7 +155,7 @@ class Calendario: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UI
                     nuevaListaClase[c].tareasHechas.remove(at: (t * -1 ) - 1)
                 }
                 arregloDia.remove(at: indexPath.row)
-               reloading()
             }
-        }
+        
+        }*/
 }

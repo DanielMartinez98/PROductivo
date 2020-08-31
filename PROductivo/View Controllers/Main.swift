@@ -11,6 +11,7 @@ import SwiftUI
 import Firebase
 import FirebaseFirestore
 import FirebaseDatabase
+import FirebaseAuth
 
 class Main: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var ref : DatabaseReference!
@@ -22,7 +23,8 @@ class Main: UIViewController, UITableViewDelegate, UITableViewDataSource {
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
-              self.navigationController?.setNavigationBarHidden(true, animated: animated)
+            self.navigationController?.setNavigationBarHidden(true, animated: animated)
+           
             super.viewWillAppear(animated)
           }
     override func viewWillDisappear(_ animated: Bool) {
@@ -30,16 +32,9 @@ class Main: UIViewController, UITableViewDelegate, UITableViewDataSource {
               super.viewWillDisappear(animated)
           }
      override func viewDidAppear(_ animated: Bool) {
-        myTableView.reloadData()
-        myTableView.beginUpdates()
-        myTableView.endUpdates()
-        self.viewWillAppear(animated)
-     }
-    func reloading()
-    {
+        self.myTableView.reloadData()
         self.myTableView.beginUpdates()
         self.myTableView.endUpdates()
-        self.myTableView.reloadData()
     }
     @IBAction func myUnwindAction(unwindsegue:SegueCreando){}
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
@@ -58,6 +53,7 @@ class Main: UIViewController, UITableViewDelegate, UITableViewDataSource {
         cell.myDias.text = String(format: "%0.f", (a.tarea.fecha.timeIntervalSince(today!)/86400).rounded().magnitude)
         cell.Cnum = a.num
         cell.Tnum = a.numt
+        cell.Lnum = indexPath.row
         return (cell)
      }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -75,6 +71,6 @@ class Main: UIViewController, UITableViewDelegate, UITableViewDataSource {
             nuevaListaClase[c].listaTarea.remove(at: t)
             organizer.remove(at: indexPath.row)
          }
-                      reloading()
+        myTableView.reloadData()
      }
 }

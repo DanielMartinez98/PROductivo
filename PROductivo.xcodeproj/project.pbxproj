@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		048F5DFE24ECE20500D625B1 /* Pods_PROductivo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C256D410511A47C50A637E43 /* Pods_PROductivo.framework */; };
+		04B19FA624ECFD8700978C7A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04B19FA524ECFD8700978C7A /* GoogleService-Info.plist */; };
+		04F72DA524FD6ABB0025EECD /* cellCalendario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F72DA424FD6ABB0025EECD /* cellCalendario.swift */; };
 		1F15A33024DA2B5800AD5907 /* Calendario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F15A32F24DA2B5800AD5907 /* Calendario.swift */; };
 		1F15A33224DA347000AD5907 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F15A33124DA347000AD5907 /* Main.swift */; };
 		1F4ECC3524E0B86500A2F554 /* CrearCuenta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4ECC3424E0B86500A2F554 /* CrearCuenta.swift */; };
 		1F4ECC3724E0B94C00A2F554 /* NavOG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4ECC3624E0B94C00A2F554 /* NavOG.swift */; };
 		1F51F27324DE12BB0001C619 /* alterarTarea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F51F27224DE12BB0001C619 /* alterarTarea.swift */; };
-		1F51F27424DE50410001C619 /* Pods_PROductivo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C256D410511A47C50A637E43 /* Pods_PROductivo.framework */; };
 		1F51F27524DE50410001C619 /* Pods_PROductivo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C256D410511A47C50A637E43 /* Pods_PROductivo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1F6F847A24E279010099750D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6F847924E279010099750D /* Constants.swift */; };
 		1F7A8A7024DA26C70005B424 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7A8A6F24DA26C70005B424 /* AppDelegate.swift */; };
@@ -28,7 +30,6 @@
 		1F860FE924DB8941002518CC /* CrearTarea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F860FE824DB8941002518CC /* CrearTarea.swift */; };
 		1F860FEB24DCAEAC002518CC /* cellAct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F860FEA24DCAEAC002518CC /* cellAct.swift */; };
 		1F860FED24DCC687002518CC /* SegueCreando.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F860FEC24DCC687002518CC /* SegueCreando.swift */; };
-		1F89EC8324E2608400D3207C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F89EC8224E2608400D3207C /* GoogleService-Info.plist */; };
 		1FB28F4A24DF806A00C7812E /* LogIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB28F4924DF806A00C7812E /* LogIn.swift */; };
 		1FB28F4C24DF811900C7812E /* SegueExit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB28F4B24DF811900C7812E /* SegueExit.swift */; };
 		1FB28F4E24DF83FF00C7812E /* LogInSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB28F4D24DF83FF00C7812E /* LogInSegue.swift */; };
@@ -51,6 +52,27 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		048F5DC624ECE20400D625B1 /* absl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = absl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		048F5DC724ECE20400D625B1 /* FBLPromises.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBLPromises.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		048F5DC824ECE20400D625B1 /* FirebaseAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		048F5DC924ECE20400D625B1 /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		048F5DCA24ECE20400D625B1 /* FirebaseCoreDiagnostics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCoreDiagnostics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		048F5DCB24ECE20400D625B1 /* FirebaseDatabase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseDatabase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		048F5DCC24ECE20400D625B1 /* FirebaseFirestore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseFirestore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		048F5DCD24ECE20400D625B1 /* FirebaseFirestoreSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseFirestoreSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		048F5DCE24ECE20400D625B1 /* FirebaseInstallations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseInstallations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		048F5DCF24ECE20400D625B1 /* FSCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FSCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		048F5DD024ECE20400D625B1 /* GoogleDataTransport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoogleDataTransport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		048F5DD124ECE20400D625B1 /* GoogleUtilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		048F5DD224ECE20400D625B1 /* grpc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = grpc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		048F5DD324ECE20400D625B1 /* gRPCCertificates-Cpp.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = "gRPCCertificates-Cpp.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		048F5DD424ECE20400D625B1 /* grpcpp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = grpcpp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		048F5DD524ECE20400D625B1 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GTMSessionFetcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		048F5DD624ECE20400D625B1 /* leveldb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = leveldb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		048F5DD724ECE20400D625B1 /* nanopb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = nanopb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		048F5DD824ECE20400D625B1 /* openssl_grpc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = openssl_grpc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		04B19FA524ECFD8700978C7A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		04F72DA424FD6ABB0025EECD /* cellCalendario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellCalendario.swift; sourceTree = "<group>"; };
 		1F15A32F24DA2B5800AD5907 /* Calendario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendario.swift; sourceTree = "<group>"; };
 		1F15A33124DA347000AD5907 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		1F4ECC3424E0B86500A2F554 /* CrearCuenta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrearCuenta.swift; sourceTree = "<group>"; };
@@ -73,7 +95,6 @@
 		1F860FE824DB8941002518CC /* CrearTarea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrearTarea.swift; sourceTree = "<group>"; };
 		1F860FEA24DCAEAC002518CC /* cellAct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellAct.swift; sourceTree = "<group>"; };
 		1F860FEC24DCC687002518CC /* SegueCreando.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueCreando.swift; sourceTree = "<group>"; };
-		1F89EC8224E2608400D3207C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1FB28F4924DF806A00C7812E /* LogIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogIn.swift; sourceTree = "<group>"; };
 		1FB28F4B24DF811900C7812E /* SegueExit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueExit.swift; sourceTree = "<group>"; };
 		1FB28F4D24DF83FF00C7812E /* LogInSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInSegue.swift; sourceTree = "<group>"; };
@@ -89,7 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F51F27424DE50410001C619 /* Pods_PROductivo.framework in Frameworks */,
+				048F5DFE24ECE20500D625B1 /* Pods_PROductivo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +122,9 @@
 			children = (
 				1F860FDE24DB6237002518CC /* Lista.swift */,
 				1F6F847924E279010099750D /* Constants.swift */,
+				1FF6E83D24DCDE2300179423 /* cellClas.swift */,
+				1F860FEA24DCAEAC002518CC /* cellAct.swift */,
+				04F72DA424FD6ABB0025EECD /* cellCalendario.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -171,19 +195,17 @@
 		1F7A8A6E24DA26C70005B424 /* PROductivo */ = {
 			isa = PBXGroup;
 			children = (
-				1F7A8A7724DA26C70005B424 /* Main.storyboard */,
+				04B19FA524ECFD8700978C7A /* GoogleService-Info.plist */,
 				1F51F27724DE518A0001C619 /* PROductivo.entitlements */,
 				1F4D2C9B24E1FC0B0067AF20 /* Helpers */,
 				1F4D2C9C24E1FCB00067AF20 /* View Controllers */,
 				1F4ECC3924E0BBAE00A2F554 /* Segues */,
 				1F4ECC3B24E0BBFA00A2F554 /* Other */,
 				1F4ECC3A24E0BBC700A2F554 /* Navigation */,
-				1FF6E83D24DCDE2300179423 /* cellClas.swift */,
-				1F860FEA24DCAEAC002518CC /* cellAct.swift */,
 				1F7A8A7A24DA26D70005B424 /* Assets.xcassets */,
 				1F7A8A7F24DA26D70005B424 /* Info.plist */,
-				1F89EC8224E2608400D3207C /* GoogleService-Info.plist */,
 				1F7A8A7C24DA26D70005B424 /* LaunchScreen.storyboard */,
+				1F7A8A7724DA26C70005B424 /* Main.storyboard */,
 			);
 			path = PROductivo;
 			sourceTree = "<group>";
@@ -191,6 +213,25 @@
 		374DF78FC4AB659CB341075F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				048F5DC624ECE20400D625B1 /* absl.framework */,
+				048F5DC724ECE20400D625B1 /* FBLPromises.framework */,
+				048F5DC824ECE20400D625B1 /* FirebaseAuth.framework */,
+				048F5DC924ECE20400D625B1 /* FirebaseCore.framework */,
+				048F5DCA24ECE20400D625B1 /* FirebaseCoreDiagnostics.framework */,
+				048F5DCB24ECE20400D625B1 /* FirebaseDatabase.framework */,
+				048F5DCC24ECE20400D625B1 /* FirebaseFirestore.framework */,
+				048F5DCD24ECE20400D625B1 /* FirebaseFirestoreSwift.framework */,
+				048F5DCE24ECE20400D625B1 /* FirebaseInstallations.framework */,
+				048F5DCF24ECE20400D625B1 /* FSCalendar.framework */,
+				048F5DD024ECE20400D625B1 /* GoogleDataTransport.framework */,
+				048F5DD124ECE20400D625B1 /* GoogleUtilities.framework */,
+				048F5DD224ECE20400D625B1 /* grpc.framework */,
+				048F5DD324ECE20400D625B1 /* gRPCCertificates-Cpp.bundle */,
+				048F5DD424ECE20400D625B1 /* grpcpp.framework */,
+				048F5DD524ECE20400D625B1 /* GTMSessionFetcher.framework */,
+				048F5DD624ECE20400D625B1 /* leveldb.framework */,
+				048F5DD724ECE20400D625B1 /* nanopb.framework */,
+				048F5DD824ECE20400D625B1 /* openssl_grpc.framework */,
 				C256D410511A47C50A637E43 /* Pods_PROductivo.framework */,
 			);
 			name = Frameworks;
@@ -216,8 +257,8 @@
 				1F7A8A6824DA26C70005B424 /* Sources */,
 				1F7A8A6924DA26C70005B424 /* Frameworks */,
 				1F7A8A6A24DA26C70005B424 /* Resources */,
-				4DBBF6B0D2F207C6165444C8 /* [CP] Embed Pods Frameworks */,
 				1F51F27624DE50410001C619 /* Embed Frameworks */,
+				2F50519225CB8FBEB2D38F2A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -267,7 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F7A8A7E24DA26D70005B424 /* LaunchScreen.storyboard in Resources */,
-				1F89EC8324E2608400D3207C /* GoogleService-Info.plist in Resources */,
+				04B19FA624ECFD8700978C7A /* GoogleService-Info.plist in Resources */,
 				1F7A8A7B24DA26D70005B424 /* Assets.xcassets in Resources */,
 				1F7A8A7924DA26C70005B424 /* Main.storyboard in Resources */,
 			);
@@ -276,7 +317,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4DBBF6B0D2F207C6165444C8 /* [CP] Embed Pods Frameworks */ = {
+		2F50519225CB8FBEB2D38F2A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -343,6 +384,7 @@
 				1FB28F4C24DF811900C7812E /* SegueExit.swift in Sources */,
 				1FF6E83E24DCDE2300179423 /* cellClas.swift in Sources */,
 				1F7A8A7024DA26C70005B424 /* AppDelegate.swift in Sources */,
+				04F72DA524FD6ABB0025EECD /* cellCalendario.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +530,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = PROductivo/PROductivo.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6WXT746PL2;
 				INFOPLIST_FILE = PROductivo/Info.plist;
@@ -497,6 +540,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cosasLoklo.PROductivo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -508,6 +552,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = PROductivo/PROductivo.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6WXT746PL2;
 				INFOPLIST_FILE = PROductivo/Info.plist;
@@ -517,6 +562,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cosasLoklo.PROductivo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -58,11 +58,9 @@ class LogIn: UIViewController {
                      }else
                      {
                         inicializador.refreshClases()
-                        inicializador.refreshTarea()
-                        run(after: 4) {
-                            self.transitionToHome()
-                        }
-                      
+                            run(after: 3) {
+                                self.transitionToHome()
+                            }
                      }
                  }
         }

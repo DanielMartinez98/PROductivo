@@ -62,11 +62,15 @@ class informacion
 {
     var nClase = Int()
     var nTarea = Int()
-    func inicializar(clas:Int,tar: Int)
+    var nLista = Int()
+    func inicializar(clas:Int, tar: Int)
     {
         nClase = clas
         nTarea = tar
-        
+    }
+    func organizando(lis: Int)
+    {
+        nLista = lis
     }
 }
 var check = false
@@ -90,8 +94,9 @@ class acciones
            dispatchGroup.enter()
            run(after: 0) {
             nuevaListaClase.removeAll()
+            var n = 0
                ref = Database.database().reference()
-               let UserID = Auth.auth().currentUser!.uid
+            let UserID = Auth.auth().currentUser!.uid
                ref?.child("Clases").child(UserID).observe(.childAdded) { (snapshot) in
                    let nombre = snapshot.key as String
                    let color = snapshot.childSnapshot(forPath: "color").value as! String
@@ -103,18 +108,51 @@ class acciones
                    let a = principalClase()
                    a.inizializar(a: nombre, b: UIColor(red: red, green: green, blue: blue, alpha: alph))
                    nuevaListaClase.append(a)
+                var cont = 0
+                let g = n
+                    ref?.child("Tareas").child(UserID).child(snapshot.key).observe(.childAdded)
+                                          { (snap) in
+                                               let nombre = snap.key as String
+                                               let fecha = snap.childSnapshot(forPath: "Fecha").value as! String
+                                               let formatter = DateFormatter()
+                                               formatter.dateFormat = "YYYY-dd-MM"
+                                               let today = formatter.date(from: formatter.string(from: Date()))
+                                               let dia = formatter.date(from: fecha)!
+                                               let a = principalTarea()
+                                               a.inizializar(a: nombre, c: dia)
+                                               nuevaListaClase[g].agregarTarea(a: a)
+                                               let b = tareaMain()
+                                                   if (dia.timeIntervalSince(today!)/86400).rounded() >= 0
+                                                       {
+                                                           b.inizializar(a: a, b: g, c: cont)
+                                                           organizer.append(b)
+                                                       }
+                                               cont += 1
+                                           }
+                    ref?.child("Tareas Hechas").child(UserID).child(snapshot.key).observe(.childAdded)
+                                              { (snap) in
+                                                   let nombre = snap.key as String
+                                                   let fecha = snap.childSnapshot(forPath: "Fecha").value as! String
+                                                   let formatter = DateFormatter()
+                                                   formatter.dateFormat = "YYYY-dd-MM"
+                                                   let dia = formatter.date(from: fecha)!
+                                                   let a = principalTarea()
+                                                   a.inizializar(a: nombre, c: dia)
+                                                   nuevaListaClase[g].tareaHecha(a: a)
+                                               }
+                   n += 1
                    }
                dispatchGroup.leave()
            }
        }
-       func refreshTarea()
+    /* func refreshTarea()
        {
 
            run(after: 2)
            {
                   organizer.removeAll()
                   ref = Database.database().reference()
-                  let UserID = Auth.auth().currentUser!.uid
+            let UserID = Auth.auth().currentUser!.uid
                if nuevaListaClase.count == 0
                {
                print("no hay clases")
@@ -163,5 +201,5 @@ class acciones
             }
         }
     }
-
+*/
 }

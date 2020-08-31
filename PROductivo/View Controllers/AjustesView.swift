@@ -8,7 +8,8 @@
 
 import UIKit
 import Firebase
-
+import FirebaseAuth
+import FirebaseDatabase
 class AjustesView: UIViewController {
 
     override func viewDidLoad() {

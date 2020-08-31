@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseDatabase
+import FirebaseAuth
 class CrearClase: UIViewController, UITextFieldDelegate{
     var color = String()
     var num = 0

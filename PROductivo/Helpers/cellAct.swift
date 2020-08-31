@@ -11,11 +11,16 @@ import UIKit
 class cellAct: UITableViewCell {
     var Cnum = Int()
     var Tnum = Int()
+    var Lnum = -1
     @IBOutlet weak var MyImage: UIImageView!
     @IBOutlet weak var MyLabel: UILabel!
     @IBOutlet weak var myDias: UILabel!
     @IBAction func pres(_ sender: Any) {
         seleccion.inicializar(clas: Cnum, tar: Tnum)
+        if Lnum > -1
+        {
+            seleccion.organizando(lis: Lnum)
+        }
     }
     
     override func awakeFromNib() {
