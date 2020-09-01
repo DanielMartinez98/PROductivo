@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		048F5DFE24ECE20500D625B1 /* Pods_PROductivo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C256D410511A47C50A637E43 /* Pods_PROductivo.framework */; };
-		04B19FA624ECFD8700978C7A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04B19FA524ECFD8700978C7A /* GoogleService-Info.plist */; };
 		04F72DA524FD6ABB0025EECD /* cellCalendario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F72DA424FD6ABB0025EECD /* cellCalendario.swift */; };
 		1F15A33024DA2B5800AD5907 /* Calendario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F15A32F24DA2B5800AD5907 /* Calendario.swift */; };
 		1F15A33224DA347000AD5907 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F15A33124DA347000AD5907 /* Main.swift */; };
@@ -34,6 +33,7 @@
 		1FB28F4C24DF811900C7812E /* SegueExit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB28F4B24DF811900C7812E /* SegueExit.swift */; };
 		1FB28F4E24DF83FF00C7812E /* LogInSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB28F4D24DF83FF00C7812E /* LogInSegue.swift */; };
 		1FB28F5024DF864500C7812E /* AjustesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB28F4F24DF864500C7812E /* AjustesView.swift */; };
+		1FD24F4A24FDB49A00814510 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1FD24F4924FDB49900814510 /* GoogleService-Info.plist */; };
 		1FF6E83E24DCDE2300179423 /* cellClas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6E83D24DCDE2300179423 /* cellClas.swift */; };
 /* End PBXBuildFile section */
 
@@ -71,7 +71,6 @@
 		048F5DD624ECE20400D625B1 /* leveldb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = leveldb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		048F5DD724ECE20400D625B1 /* nanopb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = nanopb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		048F5DD824ECE20400D625B1 /* openssl_grpc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = openssl_grpc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		04B19FA524ECFD8700978C7A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		04F72DA424FD6ABB0025EECD /* cellCalendario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellCalendario.swift; sourceTree = "<group>"; };
 		1F15A32F24DA2B5800AD5907 /* Calendario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendario.swift; sourceTree = "<group>"; };
 		1F15A33124DA347000AD5907 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
@@ -99,6 +98,7 @@
 		1FB28F4B24DF811900C7812E /* SegueExit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueExit.swift; sourceTree = "<group>"; };
 		1FB28F4D24DF83FF00C7812E /* LogInSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInSegue.swift; sourceTree = "<group>"; };
 		1FB28F4F24DF864500C7812E /* AjustesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjustesView.swift; sourceTree = "<group>"; };
+		1FD24F4924FDB49900814510 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Desktop/Aplicacion/PROductivo/PROductivo/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1FF6E83D24DCDE2300179423 /* cellClas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellClas.swift; sourceTree = "<group>"; };
 		8AC620F075271016F591AE66 /* Pods-PROductivo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PROductivo.debug.xcconfig"; path = "Target Support Files/Pods-PROductivo/Pods-PROductivo.debug.xcconfig"; sourceTree = "<group>"; };
 		8AF7C80218CD3765931A8A8D /* Pods-PROductivo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PROductivo.release.xcconfig"; path = "Target Support Files/Pods-PROductivo/Pods-PROductivo.release.xcconfig"; sourceTree = "<group>"; };
@@ -195,7 +195,7 @@
 		1F7A8A6E24DA26C70005B424 /* PROductivo */ = {
 			isa = PBXGroup;
 			children = (
-				04B19FA524ECFD8700978C7A /* GoogleService-Info.plist */,
+				1FD24F4924FDB49900814510 /* GoogleService-Info.plist */,
 				1F51F27724DE518A0001C619 /* PROductivo.entitlements */,
 				1F4D2C9B24E1FC0B0067AF20 /* Helpers */,
 				1F4D2C9C24E1FCB00067AF20 /* View Controllers */,
@@ -308,7 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F7A8A7E24DA26D70005B424 /* LaunchScreen.storyboard in Resources */,
-				04B19FA624ECFD8700978C7A /* GoogleService-Info.plist in Resources */,
+				1FD24F4A24FDB49A00814510 /* GoogleService-Info.plist in Resources */,
 				1F7A8A7B24DA26D70005B424 /* Assets.xcassets in Resources */,
 				1F7A8A7924DA26C70005B424 /* Main.storyboard in Resources */,
 			);

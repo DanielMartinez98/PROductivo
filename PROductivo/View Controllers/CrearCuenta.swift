@@ -35,7 +35,6 @@ class CrearCuenta: UIViewController, UITextFieldDelegate{
         else
         {
             //Create  cleaned version of the data
-            let firstName = "Daniel Eduardo Martinez"
             let mail = infoMail.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let passwor = InfoPass.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             //Create the Users
@@ -48,7 +47,7 @@ class CrearCuenta: UIViewController, UITextFieldDelegate{
                 else
                 {
                      let db = Firestore.firestore()
-                    db.collection("users").addDocument(data: ["name": firstName, "uid": result!.user.uid]){ (error) in
+                    db.collection("users").addDocument(data: ["uid": result!.user.uid]){ (error) in
                         if error != nil
                         {
                             self.showError("User data was incorrectly saved")
