@@ -15,18 +15,7 @@ class cellAct: UITableViewCell {
     @IBOutlet weak var MyImage: UIImageView!
     @IBOutlet weak var MyLabel: UILabel!
     @IBOutlet weak var myDias: UILabel!
-    @IBAction func pres(_ sender: Any) {
-        seleccion.inicializar(clas: Cnum, tar: Tnum)
-        if Lnum > -1
-        {
-            seleccion.organizando(lis: Lnum)
-        }
-    }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

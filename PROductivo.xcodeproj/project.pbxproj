@@ -3,18 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		048F5DFE24ECE20500D625B1 /* Pods_PROductivo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C256D410511A47C50A637E43 /* Pods_PROductivo.framework */; };
 		04F72DA524FD6ABB0025EECD /* cellCalendario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F72DA424FD6ABB0025EECD /* cellCalendario.swift */; };
 		1F15A33024DA2B5800AD5907 /* Calendario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F15A32F24DA2B5800AD5907 /* Calendario.swift */; };
 		1F15A33224DA347000AD5907 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F15A33124DA347000AD5907 /* Main.swift */; };
 		1F4ECC3524E0B86500A2F554 /* CrearCuenta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4ECC3424E0B86500A2F554 /* CrearCuenta.swift */; };
 		1F4ECC3724E0B94C00A2F554 /* NavOG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4ECC3624E0B94C00A2F554 /* NavOG.swift */; };
 		1F51F27324DE12BB0001C619 /* alterarTarea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F51F27224DE12BB0001C619 /* alterarTarea.swift */; };
-		1F51F27524DE50410001C619 /* Pods_PROductivo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C256D410511A47C50A637E43 /* Pods_PROductivo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1F6F847A24E279010099750D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6F847924E279010099750D /* Constants.swift */; };
 		1F7A8A7024DA26C70005B424 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7A8A6F24DA26C70005B424 /* AppDelegate.swift */; };
 		1F7A8A7224DA26C70005B424 /* DocumentBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7A8A7124DA26C70005B424 /* DocumentBrowserViewController.swift */; };
@@ -35,21 +33,8 @@
 		1FB28F5024DF864500C7812E /* AjustesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB28F4F24DF864500C7812E /* AjustesView.swift */; };
 		1FD24F4A24FDB49A00814510 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1FD24F4924FDB49900814510 /* GoogleService-Info.plist */; };
 		1FF6E83E24DCDE2300179423 /* cellClas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6E83D24DCDE2300179423 /* cellClas.swift */; };
+		E7DBADD827059A1100D6DC8E /* Pods_PROductivo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C256D410511A47C50A637E43 /* Pods_PROductivo.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		1F51F27624DE50410001C619 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				1F51F27524DE50410001C619 /* Pods_PROductivo.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		048F5DC624ECE20400D625B1 /* absl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = absl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,7 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				048F5DFE24ECE20500D625B1 /* Pods_PROductivo.framework in Frameworks */,
+				E7DBADD827059A1100D6DC8E /* Pods_PROductivo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,7 +242,6 @@
 				1F7A8A6824DA26C70005B424 /* Sources */,
 				1F7A8A6924DA26C70005B424 /* Frameworks */,
 				1F7A8A6A24DA26C70005B424 /* Resources */,
-				1F51F27624DE50410001C619 /* Embed Frameworks */,
 				2F50519225CB8FBEB2D38F2A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
@@ -276,7 +260,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1160;
-				LastUpgradeCheck = 1160;
+				LastUpgradeCheck = 1300;
 				ORGANIZATIONNAME = Loklo;
 				TargetAttributes = {
 					1F7A8A6B24DA26C70005B424 = {
@@ -285,7 +269,7 @@
 				};
 			};
 			buildConfigurationList = 1F7A8A6724DA26C70005B424 /* Build configuration list for PBXProject "PROductivo" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -436,6 +420,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -460,7 +445,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -496,6 +481,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -514,7 +500,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -538,7 +524,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cosasLoklo.PROductivo;
+				PRODUCT_BUNDLE_IDENTIFIER = "cosasLoklo.PROductivo--explicit-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
