@@ -11,6 +11,9 @@
 =======
 		048F5DFE24ECE20500D625B1 /* Pods_PROductivo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C256D410511A47C50A637E43 /* Pods_PROductivo.framework */; };
 		04B19FA624ECFD8700978C7A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04B19FA524ECFD8700978C7A /* GoogleService-Info.plist */; };
+<<<<<<< HEAD
+>>>>>>> parent of 347ae64 (n)
+=======
 >>>>>>> parent of 347ae64 (n)
 		04F72DA524FD6ABB0025EECD /* cellCalendario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F72DA424FD6ABB0025EECD /* cellCalendario.swift */; };
 		1F15A33024DA2B5800AD5907 /* Calendario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F15A32F24DA2B5800AD5907 /* Calendario.swift */; };
