@@ -103,9 +103,7 @@ private class _FirestoreEncoder: Encoder {
       topContainer = storage.pushKeyedContainer()
     } else {
       guard let container = storage.containers.last as? NSMutableDictionary else {
-        preconditionFailure(
-          "Attempt to push new keyed encoding container when already previously encoded at this path."
-        )
+        preconditionFailure("Attempt to push new keyed encoding container when already previously encoded at this path.")
       }
 
       topContainer = container
@@ -124,9 +122,7 @@ private class _FirestoreEncoder: Encoder {
       topContainer = storage.pushUnkeyedContainer()
     } else {
       guard let container = storage.containers.last as? NSMutableArray else {
-        preconditionFailure(
-          "Attempt to push new unkeyed encoding container when already previously encoded at this path."
-        )
+        preconditionFailure("Attempt to push new unkeyed encoding container when already previously encoded at this path.")
       }
 
       topContainer = container
@@ -626,7 +622,7 @@ private class _FirestoreReferencingEncoder: _FirestoreEncoder {
 
   // MARK: - Coding Path Operations
 
-  override fileprivate var shouldAllocateNewContainer: Bool {
+  fileprivate override var shouldAllocateNewContainer: Bool {
     // With a regular encoder, the storage and coding path grow together.
     // A referencing encoder, however, inherits its parents coding path, as well as the key it was created for.
     // We have to take this into account.

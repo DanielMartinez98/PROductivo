@@ -156,8 +156,8 @@
     FSCalendarAppearance *appearance = self.calendar.appearance;
     cell.titleLabel.font = appearance.headerTitleFont;
     cell.titleLabel.textColor = appearance.headerTitleColor;
-    cell.titleLabel.textAlignment = appearance.headerTitleAlignment; 
     _calendar.formatter.dateFormat = appearance.headerDateFormat;
+    BOOL usesUpperCase = (appearance.caseOptions & 15) == FSCalendarCaseOptionsHeaderUsesUpperCase;
     NSString *text = nil;
     switch (self.calendar.transitionCoordinator.representingScope) {
         case FSCalendarScopeMonth: {
@@ -189,13 +189,7 @@
             break;
         }
     }
-    BOOL usesUpperCase   = (appearance.caseOptions & 15) == FSCalendarCaseOptionsHeaderUsesUpperCase;
-    BOOL usesCapitalized = (appearance.caseOptions & 15) == FSCalendarCaseOptionsHeaderUsesCapitalized;
-    if (usesUpperCase) {
-        text = text.uppercaseString;
-    } else if (usesCapitalized) {
-        text = text.capitalizedString;
-    }
+    text = usesUpperCase ? text.uppercaseString : text;
     cell.titleLabel.text = text;
     [cell setNeedsLayout];
 }
@@ -217,6 +211,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+        titleLabel.textAlignment = NSTextAlignmentCenter;
         titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
         titleLabel.numberOfLines = 0;
         [self.contentView addSubview:titleLabel];
@@ -234,11 +229,8 @@
 - (void)layoutSubviews
 {
     [super layoutSubviews];
-
-    CGPoint titleHeaderOffset = self.header.calendar.appearance.headerTitleOffset;
-    self.titleLabel.frame = CGRectOffset(self.contentView.bounds,
-                                         titleHeaderOffset.x,
-                                         titleHeaderOffset.y);
+    
+    self.titleLabel.frame = self.contentView.bounds;
     
     if (self.header.scrollDirection == UICollectionViewScrollDirectionHorizontal) {
         CGFloat position = [self.contentView convertPoint:CGPointMake(CGRectGetMidX(self.contentView.bounds), CGRectGetMidY(self.contentView.bounds)) toView:self.header].x;

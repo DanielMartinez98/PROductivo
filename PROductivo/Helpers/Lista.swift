@@ -10,6 +10,8 @@ import Foundation
 import SwiftUI
 import Firebase
 import FirebaseDatabase
+var seleccion = informacion()
+var organizer = [tareaMain]()
 var nuevaListaClase = [principalClase]()
 let dispatchGroup = DispatchGroup()
 var inicializador = acciones()
@@ -17,26 +19,58 @@ var fileURL = URL.self
 var ref : DatabaseReference!
 class principalClase {
     var id = String()
-    func inizializar(a: String)
+    var colores = UIColor()
+    var listaTarea = [principalTarea]()
+    var tareasHechas = [principalTarea]()
+    func inizializar(a: String , b: UIColor)
     {
         id = a
+        colores = b
     }
-
+    func agregarTarea(a: principalTarea)
+    {
+        listaTarea.append(a)
+    }
+    func tareaHecha(a: principalTarea)
+    {
+        tareasHechas.append(a)
+    }
 }
 
-class Tarea{
-    var id = Int()
-    var clase = String()
+class principalTarea{
     var nombre = String()
     var fecha = Date()
-    var status = Bool()
-    func inizializar(Id: Int, Clase: String, Nombre: String, Fecha: Date, Status: Bool )
+    func inizializar(a:String, c:Date )
     {
-        id = Id
-        clase = Clase
-        nombre = Nombre
-        fecha = Fecha
-        status = Status
+        nombre = a
+        fecha = c
+    }
+}
+
+class tareaMain{
+    var tarea = principalTarea()
+    var num = Int()
+    var numt = Int()
+    func inizializar(a: principalTarea, b: Int, c: Int)
+    {
+        tarea = a
+        num = b
+        numt = c
+    }
+}
+class informacion
+{
+    var nClase = Int()
+    var nTarea = Int()
+    var nLista = Int()
+    func inicializar(clas:Int, tar: Int)
+    {
+        nClase = clas
+        nTarea = tar
+    }
+    func organizando(lis: Int)
+    {
+        nLista = lis
     }
 }
 var check = false
@@ -57,35 +91,58 @@ class acciones
 {
     func refreshClases()
         {
-        dispatchGroup.enter()
-        run(after: 0) {
+           dispatchGroup.enter()
+           run(after: 0) {
             nuevaListaClase.removeAll()
             var n = 0
-            ref = Database.database().reference()
+               ref = Database.database().reference()
             let UserID = Auth.auth().currentUser!.uid
-            ref?.child("Clases").child(UserID).observe(.childAdded) { (snapshot) in
+               ref?.child("Clases").child(UserID).observe(.childAdded) { (snapshot) in
                    let nombre = snapshot.key as String
+                   let color = snapshot.childSnapshot(forPath: "color").value as! String
+                   let c = color.components(separatedBy: ";")
+                   let red = CGFloat((c[1] as NSString).floatValue)
+                   let green = CGFloat((c[2] as NSString).floatValue)
+                   let blue = CGFloat((c[3] as NSString).floatValue)
+                   let alph = CGFloat((c[4] as NSString).floatValue)
                    let a = principalClase()
-                   a.inizializar(a: nombre)
+                   a.inizializar(a: nombre, b: UIColor(red: red, green: green, blue: blue, alpha: alph))
                    nuevaListaClase.append(a)
-                   
-                   let g = n
+                var cont = 0
+                let g = n
+                    ref?.child("Tareas").child(UserID).child(snapshot.key).observe(.childAdded)
+                                          { (snap) in
+                                               let nombre = snap.key as String
+                                               let fecha = snap.childSnapshot(forPath: "Fecha").value as! String
+                                               let formatter = DateFormatter()
+                                               formatter.dateFormat = "YYYY-dd-MM"
+                                               let today = formatter.date(from: formatter.string(from: Date()))
+                                               let dia = formatter.date(from: fecha)!
+                                               let a = principalTarea()
+                                               a.inizializar(a: nombre, c: dia)
+                                               nuevaListaClase[g].agregarTarea(a: a)
+                                               let b = tareaMain()
+                                                   if (dia.timeIntervalSince(today!)/86400).rounded() >= 0
+                                                       {
+                                                           b.inizializar(a: a, b: g, c: cont)
+                                                           organizer.append(b)
+                                                       }
+                                               cont += 1
+                                           }
+                    ref?.child("Tareas Hechas").child(UserID).child(snapshot.key).observe(.childAdded)
+                                              { (snap) in
+                                                   let nombre = snap.key as String
+                                                   let fecha = snap.childSnapshot(forPath: "Fecha").value as! String
+                                                   let formatter = DateFormatter()
+                                                   formatter.dateFormat = "YYYY-dd-MM"
+                                                   let dia = formatter.date(from: fecha)!
+                                                   let a = principalTarea()
+                                                   a.inizializar(a: nombre, c: dia)
+                                                   nuevaListaClase[g].tareaHecha(a: a)
+                                               }
                    n += 1
                    }
-            ref?.child("Tareas").child(UserID).observe(.childAdded) { snap in
-                 var cont = 0
-                 let nombre = snap.key as String
-                 let fecha = snap.childSnapshot(forPath: "Fecha").value as! String
-                 let a = Tarea()
-                 let formatter = DateFormatter()
-                 formatter.dateFormat = "YYYY-dd-MM"
-                 let today = formatter.date(from: formatter.string(from: Date()))
-                 let dia = formatter.date(from: fecha)!
-                a.inizializar(Id: cont, Clase: <#T##String#>, Nombre: <#T##String#>, Fecha: <#T##Date#>, Status: <#T##Bool#>)
-                 cont += 1
-             }
-                   
-                dispatchGroup.leave()
+               dispatchGroup.leave()
            }
        }
     /* func refreshTarea()

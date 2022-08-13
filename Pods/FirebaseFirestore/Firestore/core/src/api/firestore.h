@@ -34,10 +34,6 @@ namespace auth {
 class CredentialsProvider;
 }  // namespace auth
 
-namespace remote {
-class FirebaseMetadataProvider;
-}  // namespace remote
-
 namespace util {
 class AsyncQueue;
 class Executor;
@@ -55,8 +51,6 @@ class Firestore : public std::enable_shared_from_this<Firestore> {
             std::string persistence_key,
             std::shared_ptr<auth::CredentialsProvider> credentials_provider,
             std::shared_ptr<util::AsyncQueue> worker_queue,
-            std::unique_ptr<remote::FirebaseMetadataProvider>
-                firebase_metadata_provider,
             void* extension);
 
   ~Firestore();
@@ -101,12 +95,6 @@ class Firestore : public std::enable_shared_from_this<Firestore> {
   void EnableNetwork(util::StatusCallback callback);
   void DisableNetwork(util::StatusCallback callback);
 
-  /**
-   * Sets the language of the public API in the format of
-   * "gl-<language>/<version>" where version might be blank, e.g. `gl-objc/`.
-   */
-  static void SetClientLanguage(std::string language_token);
-
  private:
   void EnsureClientConfigured();
   core::DatabaseInfo MakeDatabaseInfo() const;
@@ -114,19 +102,16 @@ class Firestore : public std::enable_shared_from_this<Firestore> {
   model::DatabaseId database_id_;
   std::shared_ptr<auth::CredentialsProvider> credentials_provider_;
   std::string persistence_key_;
+  std::shared_ptr<core::FirestoreClient> client_;
 
   std::shared_ptr<util::Executor> user_executor_;
   std::shared_ptr<util::AsyncQueue> worker_queue_;
-
-  std::unique_ptr<remote::FirebaseMetadataProvider> firebase_metadata_provider_;
 
   void* extension_ = nullptr;
 
   Settings settings_;
 
   mutable std::mutex mutex_;
-
-  std::shared_ptr<core::FirestoreClient> client_;
 };
 
 }  // namespace api
